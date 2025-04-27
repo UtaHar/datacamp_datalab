@@ -1,4 +1,4 @@
--- data source: postgreSQL "unicorn companies" from datalab at datacamp
+-- data source: postgreSQL unicorn companies from datalab at datacamp
 
 WITH health_company_id AS (
     SELECT DISTINCT company_id
