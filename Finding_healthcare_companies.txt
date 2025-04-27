@@ -1,0 +1,12 @@
+-- data source: postgreSQL "unicorn companies" from datalab at datacamp
+
+WITH health_company_id AS (
+    SELECT DISTINCT company_id
+    FROM industries
+    WHERE industry ~ 'Health'
+)
+
+SELECT *
+FROM companies
+WHERE company_id IN (SELECT company_id FROM health_company_id)
+AND continent = 'Europe';
